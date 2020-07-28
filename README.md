@@ -4,6 +4,11 @@ Thank you for taking the time to do our coding challenge. Below you'll find inst
 
 At Social Construct, we combine hardware and software to [deliver better buildings](https://techcrunch.com/2020/07/14/social-constructs-computer-optimized-buildings-could-shake-construction-industrys-foundations/). In the following problem, you'll display a floor plan with certain SoCo parts to the browser according to the functionality specified in the user story.
 
+## A Bit of Background
+All of Social Construct's cables, pipes, and assorted in-wall infrastructure live under the floor as part of our raised-floor system. Floorboards sit on top of support structures called "pucks", which come in 3 sizes: 4"x4", 4"x2", and 2"x2".
+
+![Floor Wiring](https://techcrunch.com/wp-content/uploads/2020/07/floor-wiring.jpg)
+
 ## Files and Folders
 A basic React app has been provided for you. Once you clone this repository, you can run it with `npm start`. A number of helpful todos are inside `index.js` and `App.jxs` to help you get started.
 
