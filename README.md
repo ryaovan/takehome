@@ -1,68 +1,46 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# SoCo Full Stack Takehome Test
 
-## Available Scripts
+Thank you for taking the time to do our coding challenge. Below you'll find instructions and info on how to complete the exercise.
 
-In the project directory, you can run:
+At Social Construct, we combine hardware and software to [deliver better buildings](https://techcrunch.com/2020/07/14/social-constructs-computer-optimized-buildings-could-shake-construction-industrys-foundations/). In the following problem, you'll display a floor plan with certain SoCo parts to the browser according to the functionality specified in the user story.
 
-### `npm start`
+## Files and Folders
+A basic React app has been provided for you. Once you clone this repository, you can run it with `npm start`. A number of helpful todos are inside `index.js` and `App.jxs` to help you get started.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Task
+* Fetch floor plan from the provided `studio_info.json` and SoCo parts from `floor_info.json` and format them into client readable results
+    * You are not required to serve this separately from the dev server (i.e. `npm start`)
+* Use the returned data to display the floor plan and SoCo assemblies following requirements of the user story below
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### User Story
+As a user, I can:
+* View the floor plan including:
+    * room(s) - including closets and bathrooms
+    * door(s)
+    * window(s)
+    * kitchen(s)
+    * floors and pucks
+* View a list of the types of elements included in this floor plan
+    * List should be in alphabetical order
+    * List should show the count of each type of element
+* Click on a type of element and toggle the visibility of all elements on / off
+* Click on an instance of an element and have that element be highlighted a different color than the rest
 
-### `npm test`
+Some [sample wireframes](https://github.com/SocialConstruct/takehome/blob/master/wireframes.png) have been provided for context and visual clarity.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Client Implementation
+We'd like you to use [React](https://reactjs.org/). On top of that, use whatever front-end libraries you feel comfortable with.
 
-### `npm run build`
+## Running the project
+To startup the frontend client run the following command.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`npm start` - This will start the application for development
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+`npm run build` - Will create a production optimised build
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`npm test` - Will run the front end tests
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Submission Guidelines
+The zip file should be named {yourname}.zip.
+Please include the `solution.md` file explaining what you did and why. This file already includes some follow-up questions.
+The zip file should not include the node_modules folder.
