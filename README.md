@@ -12,26 +12,34 @@ All of Social Construct's cables, pipes, and assorted in-wall infrastructure liv
 ## Files and Folders
 A basic React app has been provided for you. Once you clone this repository, you can run it with `npm start`. A number of helpful todos are inside `index.js` and `App.jxs` to help you get started.
 
+The data you need is inside `studio_info.json` and `floor_info.json`
+
+`studio_info.json` contains the coordinates in WCS for all the rooms, windows, and doors of a sample studio apartment
+
+`floor_info.json` contains the coordinates in WCS for all floors and pucks of the SoCo flooring system for this sample studio apartment
+
+Both files store coordinates in WCS and as **decimal inches** in the format of `(x,y)`.
+
 ## Task
 * Fetch floor plan from the provided `studio_info.json` and SoCo parts from `floor_info.json` and format them into client readable results
     * You are not required to serve this separately from the dev server (i.e. `npm start`)
 * Use the returned data to display the floor plan and SoCo assemblies following requirements of the user story below
 
 ### User Story
-As a user, I can:
+As a user, I should be able to:
 * View the floor plan including:
     * room(s) - including closets and bathrooms
     * door(s)
     * window(s)
     * kitchen(s)
     * floors and pucks
-* View a list of the types of elements included in this floor plan
+* View a list of the types of objects included in this floor plan
     * List should be in alphabetical order
-    * List should show the count of each type of element
-* Click on a type of element and toggle the visibility of all elements on / off
-* Click on an instance of an element and have that element be highlighted a different color than the rest
+    * List should show the count of each type of objects
+* Click on an object type from the list and toggle the visibility of all objects of that type on / off
+* Click on an instance of an object on the displayed floorplan and have that objects be highlighted a different color than the rest
 
-Some [sample wireframes](https://github.com/SocialConstruct/takehome/blob/master/wireframes.png) have been provided for context and visual clarity.
+Some [sample wireframes](https://github.com/SocialConstruct/takehome/blob/master/wireframes.png) have been provided for context and visual clarity. They intend to convey functionality more than aesthetics.
 
 ## Client Implementation
 We'd like you to use [React](https://reactjs.org/). On top of that, use whatever front-end libraries you feel comfortable with.
