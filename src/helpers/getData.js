@@ -4,12 +4,23 @@ import studioInfo from '../constants/studio_info.json';
 // returns list of {elemName, count}
 const getElements = () => {
   const roomList = Object.keys(studioInfo).concat(Object.keys(floorInfo));
-  return roomList.reduce((elemsList, elemName) => {
+  const roomObjList = roomList.reduce((elemsList, elemName) => {
     return elemsList.concat({
       roomName: elemName,
       count: (studioInfo[elemName] || floorInfo[elemName]).length,
     });
   }, []);
+  return roomObjList.sort((a, b) => {
+    const nameA = a.roomName.toLowerCase(); // ignore upper and lowercase
+    const nameB = b.roomName.toLowerCase(); // ignore upper and lowercase
+    if (nameA < nameB) {
+      return -1;
+    }
+    if (nameA > nameB) {
+      return 1;
+    }
+    return 0;
+  });
 };
 
 export { getElements };

@@ -1,0 +1,16 @@
+.element-item {
+  margin: 5px auto;
+  align-content: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.element-item input {
+  align-self: center;
+  transform: scale(1.1);
+}
+
+.element-item label {
+  font-size: 1.08em;
+  margin-left: 10px;
+}

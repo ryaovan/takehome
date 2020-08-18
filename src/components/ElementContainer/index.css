@@ -4,6 +4,7 @@
   width: 100%;
   height: 100%;
   max-width: 350px;
+  max-height: 600px;
   display: flex;
   flex-direction: column;
 }
@@ -19,4 +20,9 @@
   font-size: 1.2em;
   font-weight: normal;
   margin-top: 15px;
+}
+
+.element-body {
+  padding-left: 50px;
+  padding-top: 20px;
 }

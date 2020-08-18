@@ -1,4 +1,5 @@
 import React from 'react';
+import './index.css';
 
 const Element = ({ roomName, count }) => (
   <div className="element-item">
