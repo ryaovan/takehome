@@ -20,7 +20,8 @@ code {
 .App {
   justify-content: center;
   align-content: center;
-  display: inline-flex;
+  display: flex;
+  flex-direction: row;
   margin: 50px auto;
   height: 100vw;
   width: 100vw;

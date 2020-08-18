@@ -23,4 +23,8 @@ const getElements = () => {
   });
 };
 
-export { getElements };
+const getElementList = roomName => {
+  return floorInfo[roomName] || studioInfo[roomName] || [];
+};
+
+export { getElements, getElementList };
