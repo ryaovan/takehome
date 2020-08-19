@@ -13,7 +13,6 @@ class FloorItem extends Component {
     this.state = {
       clicked: false,
     };
-    console.log(`points: `, points);
   }
 
   handleClick() {

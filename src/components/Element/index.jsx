@@ -14,6 +14,7 @@ class Element extends Component {
   }
 
   handleCheck() {
+    this.props.onElementListChange({ [this.elemName]: !this.state.checked });
     this.setState({
       checked: !this.state.checked,
     });
