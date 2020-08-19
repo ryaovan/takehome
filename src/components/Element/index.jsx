@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './index.css';
 
+import PropTypes from 'prop-types';
 class Element extends Component {
   constructor(props) {
     super(props);
@@ -34,5 +35,11 @@ class Element extends Component {
     );
   }
 }
+
+Element.propTypes = {
+  elemName: PropTypes.string,
+  count: PropTypes.number,
+  handleCheck: PropTypes.func,
+};
 
 export default Element;

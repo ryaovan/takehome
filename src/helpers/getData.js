@@ -4,7 +4,9 @@ import studioInfo from '../constants/studio_info.json';
 const TRANSLATE_X = 9680;
 const TRANSLATE_Y = -520;
 
-// returns list of {elemName, count}
+/**
+ * returns list of { elemName, count }
+ */
 const getElements = () => {
   const roomList = Object.keys(studioInfo).concat(Object.keys(floorInfo));
   const roomObjList = roomList.reduce((elemsList, elemName) => {
@@ -26,7 +28,10 @@ const getElements = () => {
   });
 };
 
-// return list of rooms for a specified element
+/**
+ * return list of rooms for specified element
+ * @param {String} elemName
+ */
 const getElementList = elemName => {
   const getData = floorInfo[elemName] || studioInfo[elemName] || [];
   return getData.map(pointList => {
@@ -37,11 +42,12 @@ const getElementList = elemName => {
   });
 };
 
-// get translated XY values
+/**
+ * returns transformed points for rendering on konva
+ * @param {Number[]} pointList
+ */
 const transformPoints = pointList => {
-  return pointList.map((coord, i) => {
-    return [coord[0] - TRANSLATE_X, coord[1] - TRANSLATE_Y];
-  });
+  return pointList.map((coord, i) => [coord[0] - TRANSLATE_X, coord[1] - TRANSLATE_Y]);
 };
 
 export { getElements, getElementList, transformPoints };

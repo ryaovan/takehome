@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './index.css';
 
 import { Line } from 'react-konva';
+import PropTypes from 'prop-types';
 
 class FloorItem extends Component {
   constructor(props) {
@@ -36,5 +37,10 @@ class FloorItem extends Component {
     );
   }
 }
+
+FloorItem.propTypes = {
+  color: PropTypes.string,
+  points: PropTypes.arrayOf(PropTypes.number),
+};
 
 export default FloorItem;
