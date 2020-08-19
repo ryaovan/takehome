@@ -1,18 +1,21 @@
 import floorInfo from '../constants/floor_info.json';
 import studioInfo from '../constants/studio_info.json';
 
+const TRANSLATE_X = 1;
+const TRANSLATE_Y = 1;
+
 // returns list of {elemName, count}
 const getElements = () => {
   const roomList = Object.keys(studioInfo).concat(Object.keys(floorInfo));
   const roomObjList = roomList.reduce((elemsList, elemName) => {
     return elemsList.concat({
-      roomName: elemName,
+      elemName: elemName,
       count: (studioInfo[elemName] || floorInfo[elemName]).length,
     });
   }, []);
   return roomObjList.sort((a, b) => {
-    const nameA = a.roomName.toLowerCase(); // ignore upper and lowercase
-    const nameB = b.roomName.toLowerCase(); // ignore upper and lowercase
+    const nameA = a.elemName.toLowerCase(); // ignore upper and lowercase
+    const nameB = b.elemName.toLowerCase(); // ignore upper and lowercase
     if (nameA < nameB) {
       return -1;
     }
@@ -23,8 +26,23 @@ const getElements = () => {
   });
 };
 
-const getElementList = roomName => {
-  return floorInfo[roomName] || studioInfo[roomName] || [];
+// return list of rooms for a specified element
+const getElementList = elemName => {
+  const getData = floorInfo[elemName] || studioInfo[elemName] || [];
+  return getData.map(pointList => {
+    return pointList.map(point => {
+      if (point.length > 2) return point.slice(0, 2);
+      return point;
+    });
+  });
 };
 
-export { getElements, getElementList };
+// get translated XY values
+const transformPoints = pointList => {
+  const newList = pointList.map((coord, i) => {
+    return [coord[0] - TRANSLATE_X, coord[1] - TRANSLATE_Y];
+  });
+  return newList;
+};
+
+export { getElements, getElementList, transformPoints };

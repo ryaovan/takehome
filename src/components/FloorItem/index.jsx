@@ -6,9 +6,9 @@ import { Line } from 'react-konva';
 class FloorItem extends Component {
   constructor(props) {
     super(props);
-    const { elemColor, dimensions } = props;
-    this.color = elemColor || 'black';
-    this.dimensions = dimensions;
+    const { color, points } = props;
+    this.color = color || 'black';
+    this.points = points;
     this.handleClick = this.handleClick.bind(this);
     this.state = {
       clicked: false,
@@ -22,11 +22,12 @@ class FloorItem extends Component {
   }
 
   render() {
+    console.log(`points: ${this.points}`);
     return (
       <Line
         x={20}
         y={20}
-        points={[0, 0, 100, 0, 100, 100, 0, 100]}
+        points={[50, 50, 150, 50, 150, 150, 50, 150]}
         stroke={this.color}
         strokeWidth={2}
         onClick={this.handleClick}
