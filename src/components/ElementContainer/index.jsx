@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './index.css';
 
-import { getElements } from '../../helpers/getData';
-import Element from '../Element/index';
+import { getElements } from '../../utils/getData';
+import Element from './Element/index';
 
 class ElementContainer extends Component {
   constructor(props) {

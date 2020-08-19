@@ -3,7 +3,7 @@ import './index.css';
 
 import { Layer } from 'react-konva';
 import FloorItem from '../FloorItem/index';
-import { transformPoints } from '../../helpers/getData';
+import { transformPoints } from '../../../utils/getData';
 import randomColor from 'randomcolor';
 
 const FloorElement = ({ isVisible, elemName, elemList }) => {

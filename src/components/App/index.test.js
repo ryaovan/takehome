@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ShallowRenderer from 'react-test-renderer/shallow';
 
-import App from './App';
+import App from '.';
 
 describe('App', () => {
   it('should render without crashing', () => {

@@ -2,8 +2,8 @@ import React from 'react';
 import './index.css';
 
 import { Stage } from 'react-konva';
-import FloorElement from '../FloorElement/index';
-import { getElements, getElementList } from '../../helpers/getData';
+import FloorElement from './FloorElement/index';
+import { getElements, getElementList } from '../../utils/getData';
 
 const FloorPlanContainer = ({ visibleElemObj }) => (
   <div className="floorplan-container">

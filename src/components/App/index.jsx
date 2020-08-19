@@ -3,7 +3,7 @@ import './index.css';
 
 import ElementContainer from '../ElementContainer/index';
 import FloorPlanContainer from '../FloorPlanContainer/index';
-import { getElements } from '../../helpers/getData';
+import { getElements } from '../../utils/getData';
 
 class App extends Component {
   constructor(props) {
