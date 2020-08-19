@@ -8,11 +8,12 @@ class FloorItem extends Component {
     super(props);
     const { color, points } = props;
     this.color = color || 'black';
-    this.points = points;
+    this.points = points.flat();
     this.handleClick = this.handleClick.bind(this);
     this.state = {
       clicked: false,
     };
+    console.log(`points: `, points);
   }
 
   handleClick() {
@@ -22,14 +23,13 @@ class FloorItem extends Component {
   }
 
   render() {
-    console.log(`points: ${this.points}`);
     return (
       <Line
-        x={20}
-        y={20}
-        points={[50, 50, 150, 50, 150, 150, 50, 150]}
+        x={0}
+        y={0}
+        points={this.points}
         stroke={this.color}
-        strokeWidth={2}
+        strokeWidth={0.8}
         onClick={this.handleClick}
         fill={this.state.clicked ? this.color : ''}
         closed

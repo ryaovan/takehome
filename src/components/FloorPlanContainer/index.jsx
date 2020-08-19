@@ -7,7 +7,7 @@ import { getElements, getElementList } from '../../helpers/getData';
 
 const FloorPlanContainer = () => (
   <div className="floorplan-container">
-    <Stage width={700} height={700}>
+    <Stage width={1000} height={1000}>
       {getElements().map(({ elemName }) => (
         <FloorElement isVisible={true} elemName={elemName} elemList={getElementList(elemName)} />
       ))}

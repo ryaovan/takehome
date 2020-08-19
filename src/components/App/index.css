@@ -22,7 +22,7 @@ code {
   align-content: center;
   display: flex;
   flex-direction: row;
-  margin: 50px auto;
+  margin: 80px auto auto auto;
   height: 100vw;
   width: 100vw;
   max-width: 1200px;

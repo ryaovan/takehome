@@ -1,8 +1,8 @@
 import floorInfo from '../constants/floor_info.json';
 import studioInfo from '../constants/studio_info.json';
 
-const TRANSLATE_X = 1;
-const TRANSLATE_Y = 1;
+const TRANSLATE_X = 9680;
+const TRANSLATE_Y = -520;
 
 // returns list of {elemName, count}
 const getElements = () => {
@@ -39,10 +39,9 @@ const getElementList = elemName => {
 
 // get translated XY values
 const transformPoints = pointList => {
-  const newList = pointList.map((coord, i) => {
+  return pointList.map((coord, i) => {
     return [coord[0] - TRANSLATE_X, coord[1] - TRANSLATE_Y];
   });
-  return newList;
 };
 
 export { getElements, getElementList, transformPoints };
