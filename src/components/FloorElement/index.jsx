@@ -1,12 +1,12 @@
 import React from 'react';
 import './index.css';
 
-import { getElementList } from '../../helpers/getData';
+import { Layer } from 'react-konva';
 
 const FloorElement = ({ isVisible, roomName, elementList }) => {
   return (
     // return list of elements drawn
-    <div className="floor-element"></div>
+    <Layer></Layer>
   );
 };
 

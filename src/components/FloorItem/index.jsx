@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
 import './index.css';
 
+import { Line } from 'react-konva';
+
 class FloorItem extends Component {
   constructor(props) {
     super(props);
     const { elemColor, dimensions } = props;
-    this.color = elemColor;
+    this.color = elemColor || 'black';
     this.dimensions = dimensions;
-    this.clicked = false;
     this.handleClick = this.handleClick.bind(this);
+    this.state = {
+      clicked: false,
+    };
   }
 
   handleClick() {
@@ -19,11 +23,16 @@ class FloorItem extends Component {
 
   render() {
     return (
-      <div
-        className="floor-item"
-        style={{ backgroundColor: this.state.clicked ? 'white' : this.color }}
+      <Line
+        x={20}
+        y={20}
+        points={[0, 0, 100, 0, 100, 100, 0, 100]}
+        stroke={this.color}
+        strokeWidth={2}
         onClick={this.handleClick}
-      ></div>
+        fill={this.state.clicked ? this.color : ''}
+        closed
+      />
     );
   }
 }

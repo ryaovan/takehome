@@ -1,6 +1,7 @@
 .floorplan-container {
   width: 800px;
   height: 800px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.05);
   margin-left: 100px;
+  padding: 20px;
 }
