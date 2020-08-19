@@ -1,3 +1,5 @@
+Randy Van, 2020-08-18
+
 # Implementation
 
 - What libraries did you add? What are they used for?
